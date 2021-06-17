@@ -1,0 +1,77 @@
+@import "../node_modules/bulma/sass/utilities/_all.sass"
+@import "../node_modules/bulma/sass/base/_all.sass"
+@import "../node_modules/bulma/sass/elements/button.sass"
+@import "../node_modules/bulma/sass/elements/container.sass"
+@import "../node_modules/bulma/sass/elements/title.sass"
+@import "../node_modules/bulma/sass/form/_all.sass"
+@import "../node_modules/bulma/sass/components/navbar.sass"
+@import "../node_modules/bulma/sass/layout/hero.sass"
+@import "../node_modules/bulma/sass/layout/section.sass"
+
+$scrollbarColor: #bbb
+$scrollbarTrackColor: rgba(0,0,0,0.0)
+
+html,
+body
+  padding: 0
+  margin: 0
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
+  overflow-x: hidden
+
+html
+  width: 100vw
+  height: 100vh
+  overflow: auto
+
+body, #__next
+  width: 100%
+  height: 100%
+
+a
+  color: inherit
+  text-decoration: none
+
+*
+  box-sizing: border-box
+  scroll-behavior: smooth
+
+main
+  width: 100%
+  height: 100%
+
+*
+  scrollbar-width: thin
+  scrollbar-color: $scrollbarColor $scrollbarTrackColor
+
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar
+  width: 10px
+
+
+*::-webkit-scrollbar-track
+  background: $scrollbarTrackColor
+
+
+*::-webkit-scrollbar-thumb
+  background-color: $scrollbarColor
+  border-radius: 20px
+  border: 3px solid $scrollbarTrackColor
+
+.navbar-brand, .navbar-burger
+  margin: 0!important
+
+.navbar-brand
+  position: relative
+
+.navbar-burger
+  position: absolute
+  right: 0
+
+@media (max-width: 961px)
+  #logolarge
+    display: none
+
+@media (min-width: 961px)
+  #logosmall
+    display: none
